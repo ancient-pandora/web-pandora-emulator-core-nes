@@ -1,0 +1,23 @@
+{
+  "platform": "nes",
+  "frontend": "EmulatorJS",
+  "frontendVersion": "4.2.3",
+  "core": "fceumm",
+  "coreVersion": "4.2.3",
+  "licenses": ["GPL-3.0", "GPL-2.0"],
+  "media": ["nes"],
+  "sources": {
+    "frontend": "https://github.com/EmulatorJS/EmulatorJS",
+    "core": "https://github.com/libretro/libretro-fceumm",
+    "build": "https://github.com/EmulatorJS/build"
+  },
+  "sha256": {
+    "runtime/loader.js": "69e0903bf1e2f62ced78895e7e511fa26e11316f7eb734925c35e919ba1287b2",
+    "runtime/emulator.min.js": "6aec3fd7bb2721255801b0a6af02e47e78b05e28a1822b1f213aacbd348abaee",
+    "runtime/emulator.min.css": "16406c60b2dc3b04ae9b115e308613e6f567a0cc7068e21d9d0c1e5030fb395e",
+    "runtime/cores/fceumm-wasm.data": "8c449fd5c36646fb0769423ed6ffa9efbdfc21fbfdc9bac7952b559d34d5b493",
+    "runtime/cores/fceumm-thread-wasm.data": "4ad3b222c51963a95f3f44d9c99910766d54402658bf252e8ce4813b58465e2a",
+    "runtime/cores/fceumm-legacy-wasm.data": "f1054b094e7149fd6278485bc1b2e51ff75c5259048ddb1134171e53d651f239",
+    "runtime/cores/fceumm-thread-legacy-wasm.data": "6b62276c8a0d03bf2473d5e0c1bb78c0bdb11c31ed7fc2bb86f5c1df8a83909d"
+  }
+}

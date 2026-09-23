@@ -1,0 +1,11 @@
+{
+  "name": "@pandora-emulator/core-nes",
+  "version": "0.1.0",
+  "description": "Pinned EmulatorJS and FCEUmm NES browser runtime for Pandora Emulator",
+  "license": "GPL-3.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  }
+}

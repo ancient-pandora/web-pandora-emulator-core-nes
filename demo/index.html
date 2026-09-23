@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pandora NES FCEUmm Test</title>
+  <link rel="stylesheet" href="./smoke.css">
+</head>
+<body>
+  <main>
+    <h1>NES FCEUmm 호환성 테스트</h1>
+    <p>사용자가 보유한 <code>.nes</code> ROM을 선택하세요. 파일은 서버로 전송되지 않습니다.</p>
+    <label class="picker">ROM 선택 <input id="rom" type="file" accept=".nes,application/octet-stream"></label>
+    <p id="status" role="status">Mapper 25를 지원하는 FCEUmm · ROM을 기다리는 중</p>
+    <section id="screen" aria-label="NES game screen"></section>
+    <p class="keys">방향키 · A: Z/Y · B: X · Start: Enter · Select: 오른쪽 Ctrl</p>
+  </main>
+  <script type="module" src="./smoke.js"></script>
+</body>
+</html>
