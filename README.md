@@ -7,6 +7,7 @@ Pinned browser runtime for the NES/Famicom product of Wenys Emulator.
 - EmulatorJS `4.2.3`
 - FCEUmm libretro core
 - Standard, threaded, legacy, and threaded-legacy WASM variants
+- EmulatorJS compression workers required to unpack core artifacts at runtime
 - No ROMs, BIOS files, save data, or game assets
 
 The web product owns installation, browser persistence, Google Drive transfer,
@@ -33,5 +34,5 @@ Open `http://localhost:8091/demo/` and select a user-owned `.nes` file.
 ## Update policy
 
 Never point production at an unversioned `stable` or `latest` URL. Update the
-runtime and all four FCEUmm variants together, refresh their SHA-256 values in
+runtime, compression workers, and all four FCEUmm variants together, refresh their SHA-256 values in
 `core-manifest.json`, run the smoke test, and release a new core tag.

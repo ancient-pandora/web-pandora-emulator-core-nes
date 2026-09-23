@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { configureNesRuntime, installNesRuntimeGlobals, NES_CORE_ID, NES_CORE_VERSION } from "../src/nes-core.js";
 import { configureNesCore, nesPlatform } from "../src/platform.js";
+import { readFile } from "node:fs/promises";
 
 test("declares the pinned FCEUmm single-media platform", () => {
   assert.equal(NES_CORE_ID, "fceumm");
@@ -31,4 +32,10 @@ test("rejects incomplete runtime configuration", () => {
   assert.throws(() => configureNesRuntime({ gameUrl: "blob:test" }), /player selector/);
   assert.throws(() => configureNesRuntime({ player: "#screen" }), /ROM URL/);
   assert.throws(() => installNesRuntimeGlobals(null, { player: "#screen", gameUrl: "blob:test" }), /global target/);
+});
+
+test("manifest pins the core archives and their runtime decompressor", async () => {
+  const manifest = JSON.parse(await readFile(new URL("../core-manifest.json", import.meta.url), "utf8"));
+  assert.equal(Object.keys(manifest.sha256).length, 11);
+  assert.ok(manifest.sha256["runtime/compression/extract7z.js"]);
 });
